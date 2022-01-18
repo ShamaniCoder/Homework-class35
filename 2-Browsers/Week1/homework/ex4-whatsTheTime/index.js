@@ -8,7 +8,18 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 2. Have the function execute when it's loading in the browser.
 ------------------------------------------------------------------------------*/
 function addCurrentTime() {
-  // TODO complete this function
+  const body = document.querySelector('body');
+  const currentTime = document.createElement('p');
+  function showTime() {
+    const date = new Date();
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    const time = `Current-Time: ${hour}:${minutes}:${seconds}`;
+    currentTime.textContent = time;
+  }
+  body.appendChild(currentTime);
+  setInterval(showTime, 1000);
 }
 
-// TODO execute `addCurrentTime` when the browser has completed loading the page
+window.addEventListener('load', addCurrentTime);

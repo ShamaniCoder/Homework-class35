@@ -1,0 +1,23 @@
+2022-01-18 05:16:24 info: ----------------------------------------
+2022-01-18 05:16:24 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-01-18 05:16:24 info: ----------------------------------------
+2022-01-18 05:16:40 info: All unit tests passed.
+2022-01-18 05:16:46 info: All steps were completed successfully
+2022-01-18 10:21:38 info: --------------------------------------------
+2022-01-18 10:21:38 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-01-18 10:21:38 info: --------------------------------------------
+2022-01-18 10:21:50 info: All unit tests passed.
+2022-01-18 10:21:55 info: All steps were completed successfully
+2022-01-18 10:22:20 info: ------------------------------------------
+2022-01-18 10:22:20 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-01-18 10:22:20 info: ------------------------------------------
+2022-01-18 10:22:24 info: All unit tests passed.
+2022-01-18 10:22:28 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:11:43 - Unknown word (Xdpd)
+
+2022-01-18 10:56:56 info: ---------------------------------------
+2022-01-18 10:56:56 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-01-18 10:56:56 info: ---------------------------------------
+2022-01-18 10:57:03 info: All unit tests passed.
+2022-01-18 10:57:07 info: All steps were completed successfully
