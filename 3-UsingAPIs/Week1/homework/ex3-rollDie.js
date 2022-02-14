@@ -37,6 +37,7 @@ function rollDie() {
   })
 
 }
+//Because of the callback function doesn't have a return statement, the rest of the function continues to execute until it ends. With the promise version, we will have two values depends on resolve or reject.
 
 function main() {
   rollDie()
