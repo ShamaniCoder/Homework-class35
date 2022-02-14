@@ -22,7 +22,7 @@ const getAnonName = (firstName) => {
 };
 
 function main() {
-  getAnonName('John', console.log);
+  getAnonName('John').then(data => console.log(data));
 }
 
 // ! Do not change or remove the code below
