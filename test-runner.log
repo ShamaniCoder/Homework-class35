@@ -713,3 +713,8 @@ Tests:       3 failed, 8 passed, 11 total
 Snapshots:   0 total
 Time:        10.733 s, estimated 11 s
 Ran all test suites matching /ex2-checkDoubleDigits.test.js/i.
+2022-02-14 09:26:56 info: --------------------------------------------
+2022-02-14 09:26:56 info: >>> Running Unit Test `ex4-pokerDiceAll` <<<
+2022-02-14 09:26:56 info: --------------------------------------------
+2022-02-14 09:27:00 info: All unit tests passed.
+2022-02-14 09:27:03 info: All steps were completed successfully

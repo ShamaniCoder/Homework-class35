@@ -28,7 +28,7 @@ const rollDie = require('../../helpers/pokerDiceRoller');
 
 function rollDice() {
   const dice = [1, 2, 3, 4, 5];
-  const promiseArray = dice.map((die) => rollDie(die));
+  const promiseArray = dice.map(rollDie);
   return Promise.all(promiseArray);
 }
 
@@ -37,6 +37,8 @@ function main() {
     .then((results) => console.log('Resolved!', results))
     .catch((error) => console.log('Rejected!', error.message));
 }
+
+//I stored all promises in an array, so that even if a promise gives reject, other promises continue to be resolved thanks to Promises.all.
 
 // ! Do not change or remove the code below
 if (process.env.NODE_ENV !== 'test') {
