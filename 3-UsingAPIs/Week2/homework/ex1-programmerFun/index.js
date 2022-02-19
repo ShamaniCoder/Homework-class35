@@ -22,25 +22,24 @@ const body = document.querySelector('body');
 async function requestData(url) {
   const response = await fetch(url);
 
-  if (response) {
-    return response.json()
-  } else {
-    throw new Error('Failed to fetch data')
+  if (!response.ok) {
+    throw new Error('Failed to Fetch Data')
   }
+  return await response.json()
+
 }
 
 function renderImage(data) {
   const imageElement = document.createElement('img');
   imageElement.src = data.img;
-  imageElement.setAttribute('alt', 'cartoon');
+  imageElement.setAttribute('alt', data.alt);
   body.appendChild(imageElement);
 }
 
 function renderError(error) {
-  const h1Element = document.createElement('H1');
-  h1Element.textContent = error
-  console.log(error);
-  body.appendChild(h1Element);
+  const textElement = document.createElement('h1');
+  textElement.textContent = error.message;
+  body.appendChild(textElement);
 }
 
 
