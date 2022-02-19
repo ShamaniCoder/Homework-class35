@@ -26,19 +26,23 @@ async function fetchData(url) {
 }
 
 async function fetchAndPopulatePokemons() {
-  const data = await fetchData(BASE_URL)
-  const selectElement = document.createElement('select')
-  data.results.forEach((result) => {
-    const optionElement = document.createElement('option')
-    optionElement.text = result.name;
-    optionElement.value = result.url;
-    selectElement.appendChild(optionElement)
-  })
+  try {
+    const data = await fetchData(BASE_URL)
+    const selectElement = document.createElement('select')
+    data.results.forEach((result) => {
+      const optionElement = document.createElement('option')
+      optionElement.text = result.name;
+      optionElement.value = result.url;
+      selectElement.appendChild(optionElement)
+    })
 
-  document.body.appendChild(selectElement);
-  selectElement.addEventListener('change', (event) => {
-    fetchImage(event.target.value)
-  })
+    document.body.appendChild(selectElement);
+    selectElement.addEventListener('change', (event) => {
+      fetchImage(event.target.value)
+    })
+  } catch (error) {
+    console.log(error)
+  }
 
 
 }
@@ -54,7 +58,9 @@ async function fetchImage(imageUrl) {
 
     imageElement.src = data.sprites.front_default;
     document.body.appendChild(imageElement);
-  } catch (err) { err.message }
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 function main() {
