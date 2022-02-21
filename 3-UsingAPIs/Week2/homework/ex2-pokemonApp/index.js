@@ -22,7 +22,8 @@ async function fetchData(url) {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error('Failed to fetch data')
-  } return await response.json()
+  } 
+  return await response.json()
 }
 
 async function fetchAndPopulatePokemons() {
@@ -57,6 +58,7 @@ async function fetchImage(imageUrl) {
     const imageElement = document.createElement('img');
 
     imageElement.src = data.sprites.front_default;
+    imageElement.alt = data.alt
     document.body.appendChild(imageElement);
   } catch (error) {
     console.log(error)
